@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Monogame_Assignment_1___Content__Scaling
+namespace Monogame_Assignment_1___Content__Scaling //Maxym F.
 {
     public class Game1 : Game
     {
