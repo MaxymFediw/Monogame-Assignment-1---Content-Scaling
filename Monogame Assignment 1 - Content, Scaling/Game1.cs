@@ -12,6 +12,8 @@ namespace Monogame_Assignment_1___Content__Scaling //Maxym F.
 
         Random generator;
 
+        int kennyOpacity;
+
         Rectangle window;
 
         Texture2D backgroundTexture;
@@ -55,6 +57,8 @@ namespace Monogame_Assignment_1___Content__Scaling //Maxym F.
             Window.Title = "The Boys of South Park";
 
             generator = new Random();
+
+            kennyOpacity = generator.Next(1, 3);
 
             window = new Rectangle(0, 0, 800, 500); //        x, y, width, height
 
@@ -125,9 +129,18 @@ namespace Monogame_Assignment_1___Content__Scaling //Maxym F.
 
             _spriteBatch.Draw(kyleTexture, kyleRect, Color.White);
 
-            _spriteBatch.Draw(kennyTexture, kennyRect, Color.White * textOpacity);
 
-            _spriteBatch.Draw(stanTexture, stanRect, Color.White);
+            if (kennyOpacity == 1)
+            {
+                _spriteBatch.Draw(kennyTexture, kennyRect, Color.White * textOpacity);
+            }
+
+            else 
+            {
+                _spriteBatch.Draw(kennyTexture, kennyRect, Color.White);
+            }
+
+                _spriteBatch.Draw(stanTexture, stanRect, Color.White);
 
             _spriteBatch.Draw(buttersTexture, buttersRect, Color.White);
 
